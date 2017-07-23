@@ -1,24 +1,27 @@
-<h2><%= @deck.title %></h2>
-<div>
-    Format: <%= @deck.format %><br \>
-    Created by <%= @deck.user.email %> <%= time_ago_in_words(@deck.created_at) %> ago.
+<div class="col-md-8 col-md-offset-2">
+  <div class="deck-show">
+    <h2><%= @deck.title %></h2>
+    <div>
+        <h4>Format: <%= @deck.format %></h4>
+        <p class="deck-posted-by">Created by <%= @deck.user.email %> <%= time_ago_in_words(@deck.created_at) %> ago.</p>
+    </div>
+    <p class="deck-desc"><%= @deck.description %></p>
+
+    <h3>Comments:</h3>
+        <%= render @deck.comments %> <!-- Rendered from the _comment.html.erb partial -->
+
+    <h3 class="comment-on-deck">Comment on this Deck!</h3>
+    <%= render 'comments/form' %>
+
+    <div class="links btn-group">
+        <% if user_signed_in? %>
+            <% if @deck.user_id == current_user.id %>
+                <%= link_to  "Edit", edit_deck_path(@deck), class: "btn btn-default" %>
+                <%= link_to  "Delete", deck_path(@deck), method: :delete,
+                    data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+            <% end %>
+        <% end %>
+        <%= link_to "Back", root_path, class: "btn btn-default" %>
+    </div>
+  </div>
 </div>
-<br \>
-<p><%= @deck.description %></p>
-
-<h3>Comments:</h3>
-    <%= render @deck.comments %> <!-- Rendered from the _comment.html.erb partial -->
-<br \>
-
-
-<h3>Comment on this Deck!</h3>
-<%= render 'comments/form' %>
-
-<% if user_signed_in? %>
-    <% if @deck.user_id == current_user.id %>
-        <%= link_to  "Edit", edit_deck_path(@deck) %> |
-        <%= link_to  "Delete", deck_path(@deck), method: :delete,
-            data: { confirm: "Are you sure?" } %> |
-    <% end %>
-<% end %>
-<%= link_to  "Back", root_path %>
