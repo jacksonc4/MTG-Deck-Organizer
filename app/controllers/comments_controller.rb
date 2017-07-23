@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
 before_action :find_deck # before executing any action find the deck we are working with,
                          # no need to specify an 'only' since we want to get the deck on each operation
-                         
+
 before_action :find_comment, only: [:edit, :update, :destroy] # same as above, but we don't need to find
                                                               # a comment for the 'create' function.
+before_action :authenticate_user! # prevents unauthenticated user from creating a commment
+
     def create
         @comment = @deck.comments.create(comment_params)
         @comment.user_id = current_user.id
@@ -27,7 +29,9 @@ before_action :find_comment, only: [:edit, :update, :destroy] # same as above, b
         end
     end
 
-    def delete
+    def destroy
+        @comment.destroy
+        redirect_to deck_path(@deck)
     end
 
     private
