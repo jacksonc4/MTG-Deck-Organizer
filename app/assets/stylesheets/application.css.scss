@@ -20,7 +20,9 @@
 /* General styles */
 
 body {
-	background-color: #fff;
+    background: image-url("mtg_lands_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 	font-family: 'Playfair Display', serif;
 }
 
@@ -89,6 +91,51 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+/* Signup Page */
+.signup {
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #383838;
+    margin-top: 60px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 1.4em 1.4em;
+	height: 400px;
+    border-bottom: 4px solid #0a8fd5;
+
+    .signup-title {
+        font-size: 3em;
+        font-family: 'Muli', sans-serif;
+		font-weight: 300;
+        color: white;
+        text-align: center;
+    }
+    
+}
+
+/* Login Page */
+.login {
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #383838;
+    margin-top: 60px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 1.4em 1.4em;
+	height: 350px;
+    border-bottom: 4px solid #0a8fd5;
+
+    .login-title {
+        font-size: 3em;
+        font-family: 'Muli', sans-serif;
+		font-weight: 300;
+        color: white;
+        text-align: center;
+    }
+    
+}
 
 /* Deck styles */
 

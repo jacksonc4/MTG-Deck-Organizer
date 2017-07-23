@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :decks do
     resources :comments
   end
-  root 'decks#index'
+
+    root 'decks#index'
+    
 end

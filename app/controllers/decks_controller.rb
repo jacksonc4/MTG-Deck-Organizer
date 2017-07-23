@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
     before_action :find_deck, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!, except: [:index, :show] # protects new deck route from unauthenticated
+    before_action :authenticate_user! # protects new deck route from unauthenticated
                                                                # access.
     def index
         @decks = Deck.all.order("created_at DESC")
