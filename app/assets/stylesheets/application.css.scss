@@ -21,6 +21,7 @@
 
 body {
     background: image-url("mtg_lands_background.jpg");
+    background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
 	font-family: 'Playfair Display', serif;
@@ -31,13 +32,36 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;	
 }
 
+.alert-success {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+.alert-warning {
+    font-family: 'Muli', sans-serif;
+    font-size: 0.8em;
+}
+
+.alert-danger {
+    font-family: 'Muli', sans-serif;
+    font-size: 0.8em;
+}
+
+.alert-info {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
 .btn-custom {
 	background-color: #fff;
 	color: #0a8fd5;
 	font-family: 'Muli', sans-serif; 
 	font-weight: 300;
 	border-radius: 8px;
-	padding: 10px 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
 	&:hover {
 		color: #383838;
 		transition: 0.5s;
@@ -96,12 +120,12 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     border-radius: 25px;
     background-color: #383838;
-    margin-top: 60px;
+    margin-top: 20px;
 	margin-bottom: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
 	padding: 1.4em 1.4em;
-	height: 400px;
+	height: 500px;
     border-bottom: 4px solid #0a8fd5;
 
     .signup-title {
@@ -109,9 +133,17 @@ h1, h2, h3, h4, h5, h6 {
         font-family: 'Muli', sans-serif;
 		font-weight: 300;
         color: white;
-        text-align: center;
+        text-align: left;
     }
     
+    .signup-label {
+        font-size: 1em;
+        font-family: 'Muli', sans-serif;
+		font-weight: 150;
+        color: white;
+        text-align: left;
+    }
+
 }
 
 /* Login Page */
@@ -119,12 +151,12 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     border-radius: 25px;
     background-color: #383838;
-    margin-top: 60px;
+    margin-top: 20px;
 	margin-bottom: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
 	padding: 1.4em 1.4em;
-	height: 350px;
+	height: 375px;
     border-bottom: 4px solid #0a8fd5;
 
     .login-title {
@@ -132,7 +164,15 @@ h1, h2, h3, h4, h5, h6 {
         font-family: 'Muli', sans-serif;
 		font-weight: 300;
         color: white;
-        text-align: center;
+        text-align: left;
+    }
+
+    .login-label {
+        font-size: 1em;
+        font-family: 'Muli', sans-serif;
+		font-weight: 150;
+        color: white;
+        text-align: left;
     }
     
 }
@@ -140,26 +180,36 @@ h1, h2, h3, h4, h5, h6 {
 /* Deck styles */
 
 .deck {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 15px;
 	background-color: #383838;
 	margin-bottom: 25px;
 	margin-right: 10px;
 	margin-left: 10px;
 	padding: 1.4em 1.4em;
-	height: 110px;
+	height: 135px;
 	border-bottom: 4px solid #0a8fd5;
 
 	.deck-title {
 		font-size: 1.5em;
 		font-family: 'Muli', sans-serif;
 		font-weight: 300;
-		margin-top: 0;
+        margin-top: 0;
+        margin-bottom: 5px;
 		color: white;
-		margin-bottom: 25px;
-	}
+    }
+    
+    .deck-label {
+        font-size: 1em;
+        font-family: 'Muli', sans-serif;
+        font-weight: 150;
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: white;
+    }
 
 	.btn-custom {
-		margin-top: 20px;
+        margin-top: 20px;
 	}
 
 }
@@ -171,11 +221,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Deck show-page styles */
 
 .deck-show {
-	box-sizing: border-box;
-	background-color: #383838;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #383838;
 	padding: 2.0em 1.5em;
 	border-bottom: 4px solid #0a8fd5;
-	color: #fff;
+    color: #fff;
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 
