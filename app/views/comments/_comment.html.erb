@@ -1,0 +1,6 @@
+<p><%= comment.content %></p> <!-- Dictates the format of each comment created -->
+
+<!-- Links to the deck being inspected, and shows an associated comment -->
+<%= link_to "Edit", edit_deck_comment_path(comment.deck, comment) %>
+<%= link_to "Delete", deck_comment_path(comment.deck, comment), method: :delete,
+    data: { confirm: "Are you sure?" } %>

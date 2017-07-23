@@ -1,0 +1,12 @@
+<h1>Deck Listing Index</h1>
+
+<% @decks.each do |deck| %>
+  <h2><%= deck.title %></h2>
+    <%= link_to "View Deck", deck_path(deck), class: "btn btn-default" %>
+    
+<% end %>
+
+<br />
+<br />
+
+<%= link_to  "New Deck", new_deck_path, class: "btn btn-primary" %>

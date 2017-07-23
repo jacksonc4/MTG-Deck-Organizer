@@ -1,0 +1,17 @@
+<h2><%= @deck.title %></h2>
+<div>
+    Format: <%= @deck.format %>
+</div>
+<br \>
+<p><%= @deck.description %></p>
+
+<h3>Comments:</h3>
+<%= render @deck.comments %> <!-- Rendered from the _comment.html.erb partial -->
+
+<h3>Reply to Message:</h3>
+<%= render 'comments/form' %>
+
+<%= link_to  "Edit Deck", edit_deck_path(@deck), class: "btn btn-primary" %>
+<%= link_to  "Delete", deck_path(@deck), method: :delete,
+    data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+<%= link_to  "Back", root_path, class: "btn btn-default" %>
