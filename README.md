@@ -10,8 +10,13 @@ More to come later!
 
 # Screenshots:
 ![Screenshot](screenshots/1_signup.png)
-![Screenshot](screenshots/2_login.png)
+
+![Screenshot](screenshots/2_Login.png)
+
 ![Screenshot](screenshots/3_deck_index.png)
+
 ![Screenshot](screenshots/4_showdeck1.png)
+
 ![Screenshot](screenshots/5_showdeck2.png)
+
 ![Screenshot](screenshots/6_createnew.png)
