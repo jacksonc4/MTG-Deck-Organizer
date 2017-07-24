@@ -6,6 +6,8 @@ Run 'bundle install' inside the root directory once cloned.
 
 Database is SQLite3.
 
+More to come later! 
+
 # Screenshots:
 ![Screenshot](screenshots/1_signup.png)
 ![Screenshot](screenshots/2_login.png)
